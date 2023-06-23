@@ -124,6 +124,17 @@
          "id":71,
          "name":"meeting-room",
          "opacity":1,
+         "properties":[
+                {
+                 "name":"jitsiRoom",
+                 "type":"string",
+                 "value":"Lernraum"
+                }, 
+                {
+                 "name":"jitsiTrigger",
+                 "type":"string",
+                 "value":"onaction"
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":37,
@@ -439,6 +450,32 @@
          "name":"WA_User_Interface",
          "spacing":0,
          "tilecount":273,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":16,
+         "firstgid":2956,
+         "image":"tilesets\/pokemon_indoor_4thGen_32x32.png",
+         "imageheight":34112,
+         "imagewidth":512,
+         "margin":0,
+         "name":"pokemon_indoor_4thGen",
+         "spacing":0,
+         "tilecount":17056,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":16,
+         "firstgid":20012,
+         "image":"tilesets\/pokemon_indoor_32x32.png",
+         "imageheight":38336,
+         "imagewidth":512,
+         "margin":0,
+         "name":"pokemon_indoor_32x32",
+         "spacing":0,
+         "tilecount":19168,
          "tileheight":32,
          "tilewidth":32
         }],
