@@ -492,7 +492,7 @@
         {
          "columns":8,
          "firstgid":38889,
-         "image":"..\/..\/Downloads\/pokemon_indoor_4thGen.png",
+         "image":"tilesets\/pokemon_indoor_4thGen.png",
          "imageheight":17056,
          "imagewidth":256,
          "margin":0,
