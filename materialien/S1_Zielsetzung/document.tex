@@ -1,0 +1,209 @@
+\documentclass[a4paper,oneside]{scrarticle}
+
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2.25cm]{geometry}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+%\graphicspath{ {./images/} }
+\addto\captionsngerman{\renewcommand{\figurename}{Fig.}}
+
+
+\begin{document}
+	\begin{flushleft}
+		Bach Nguyen - HTWK Leipzig - INB (Draft)
+	\end{flushleft}
+	\begin{center}
+		\begin{LARGE}
+			\textbf{Problem of the Month (February 2007)}
+		\end{LARGE}
+	\end{center}
+	\section*{Problem description}
+	In February 2007, we investigated positions of 2 kinds of chess pieces, each of which the same number of the other piece but none of their own. Is there a position where each bishop attacks 2 knights and each knight attacks 3 bishops? We abbreviate this as (B=2, N=3). Here are all the unsolved cases: (B=2, K=4), (B=4, Q=3), (K=2, Q=5), (N=3, R=3), (N=4, R=2).
+	\section*{(K=2, Q=5)}
+	In this case, we will try to disproof of any possible finite solutions.\\
+	k:= King (piece), q:= Queen (piece)\\
+	$\mathbb{K}$ set of all King pieces, $\mathbb{Q}$ set of all Queen pieces\\
+	\\
+	We will be using the following notation:\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.3\linewidth]{notation}
+		\caption{notation}
+		\label{fig:notation}
+	\end{figure}
+	\\
+	The position of a piece will be a tuple (n,m), where n is the row and m the column. Ex. $k_3 = (2,2), k_2 = (n,3), k_1 = (3,m)$.\\
+	Furthermore we define a two projection functions to give us the piece's row and column\\
+	$\pi_r:\mathbb{K}\cup\mathbb{Q}\rightarrow\mathbb{N}$\\
+	$\pi_r(p) = \pi_r((x,y)) = x$\\
+	$\pi_c:\mathbb{K}\cup\mathbb{Q}\rightarrow\mathbb{N}$\\
+	$\pi_c(p) = \pi_r((x,y)) = y$\\
+	\\
+	An open King for a Queen in South, means there are at least one space and no other pieces between these two.\\
+	\\
+	Directions are named after the cardinal direction.\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.2\linewidth]{carnialdirection}
+		\caption{cardinal direction}
+		\label{fig:carnialdirection}
+	\end{figure}
+	
+		
+	\pagebreak
+	
+	\section*{Proof by exhaustion}
+	
+	\section{definition $k_r,k_b$}
+	Let us assume there is a possible solution. Then there has to be one most outer piece to the right. Without loss of generality, due to axial and rotation symmetry in all 4 directions, we can then infer all other symmetries.\\
+	\\
+	If a solution exists, there has to be at least 5 Kings and 2 Queens. Now that there are more than 2 Kings, then there has to be at least one King that is farthest to the right. We will call this column m, which means
+	\begin{flalign}
+		\exists!m\in \mathbb{N}\ \forall k\in\mathbb{K}:m\geq\pi_c(k)\land m\in\pi_c(\mathbb{K})
+	\end{flalign}
+	From all k there is but one piece that is most south $k_r = (x,m)$ with $x\in\{1,2,\dots,n\}$\\
+	Similarly there has to be at least one King in the most south row $n$ that is farthest to the east, which we denote the position $k_b = (n,y)$ with $y\in\{1,2,\dots,m\}$ with $n,m\in\mathbb{N}$
+	\begin{flalign}
+		\exists!k_r\forall k\in\{p|\pi_c(p)=m\land p\in\mathbb{K}\}: \pi_r(k_r)\geq\pi_r(k)\\
+		\exists!k_b\forall k\in\{p|\pi_r(p)=n\land p\in\mathbb{K}\}: \pi_c(k_b)\geq\pi_r(k)
+	\end{flalign}
+	\\
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.3\linewidth]{example_edge}
+		\caption{example edge}
+		\label{edge case}
+	\end{figure}
+	
+	\section{$k_r \neq k_b$}
+	
+	Firstly, let us rule out the case where $k_r = k_b$. This means there is in fact just one piece and $\forall k\in\mathbb{K}: \pi_c(k)\leq\pi_c(k_r) \land \pi_r(k)\leq\pi_r(k_r)$\\
+	If this configuration is part of a solution, then let us consider where the queen pieces can be placed in order to satisfy our condition.\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.2\linewidth]{kbkr_equal}
+		\caption{$k_r = k_b$ queen positioning}
+		\label{fig:kbkrequal}
+	\end{figure}
+	\\
+	If we take a look at $q_0$, then we can see that in order to threaten 5 Kings in total, only 3 Kings can be placed in NW,W and SW direction. Which also means that at least 2 Kings have to be placed in the remaining directions, which violates our premise for $k_r$ to be the most outer piece. Similarly, $q_1,q_2,q_3,q_4$ would also violate it.\\
+	This means for $k_r = k_b$, the 2 Queens have to be placed within the NW,W and SW direction. But this is also impossible because then the Queens would threaten themselves which violates our problem definition.
+	
+	\section{Queens of $k_r$}
+	
+	Continuing the reasoning using $k_r$ as the most south of the most east king pieces of a possible finite solution, we can first rule out the case where one of the queens are placed in any of the east neighbor tiles.\\
+	\begin{figure*}[h]
+		\centering
+		\includegraphics[width=0.4\linewidth]{QueenKingExpansion}
+		\caption{Queen Threats}
+		\label{fig:queenkingexpansion}
+	\end{figure*}\\
+	If there is a $q_r\in\mathbb{Q}$ east to $k_r$, then there has to be at least two other Kings placed either in the same column or even further to the east than $q_r$. We will call this "forced king expansion to the east". This violates our premise of $k_r$ and will be deemed impossible.
+	\\
+	\begin{figure*}[h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{krQueentiles}
+		\caption{$k_r$ Queen neighbors all configurations King threatening 2 Queens}
+		\label{fig:krqueentiles}
+	\end{figure*}\\
+	Out of all configurations only 3 remain: 6,7 and 9.\\
+	\\
+	What happens for 6 and 7 when a Queen is placed South of $k_r$?\\
+	Again we shall not expand to the East. Only one possible configuration for this piece to threaten 5 Kings remain by placing another King to the south. This also, violates our premise (2). Therefore no such solution would exist.\\
+	\\
+	The only pattern left is 9 (Fig. 6) and now we know that in a finite solution, the Queens threatened by $k_r$ have to be placed N and SW.
+	
+	\section{Queens of $k_b$}
+	Due to symmetry, we can infer the only possible shape of Queens around $k_b:$ pattern 1 in Fig. 6.\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\linewidth]{patternkrkb}
+		\caption{pattern $k_r$ and $k_b$}
+		\label{fig:patternkrkb}
+	\end{figure}
+	
+	\section{Standalone King expansion}
+	Given any Queen piece, because there are only 8 directions and 5 of them threatening a King it holds that there has to be at least one pair of Kings in opposite direction.\\
+	With this, for any standalone King $k_a\in\mathbb{K}$ we can deduce the following.\\
+	If there is a Queen in either S, SE or E, then they would expect at least another King further south or east compared to this King.
+	\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{standaloneKingQueen}
+		\caption{standalone $k_a$ for Queen in SE,S,E}
+		\label{fig:standalonekingqueen}
+	\end{figure}
+	\\
+	In order to not expand a King from $k_a$ in direction S, SE, E, only configurations 1,9,10 remain (Fig.6).
+	\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.5\linewidth]{standaloneKingQueenremain}
+		\caption{remaining options no S,SE,E}
+		\label{fig:standalonekingqueenremain}
+	\end{figure}
+	
+	
+	
+
+	\section{King expansion of $k_r$}
+	Now let us continue by examining the Queen $q_r$ SW to $k_r$. Let's try to find a solution where we can avoid a King expansion in direction S,SE or E. Immediately we can see, E and SE should be free of Kings (2). While threatening Kings to N, NW, W and obviously also $k_r$ only 2 directions remain S, SW. Because of Q=5 there has to be a King in at least one of them.
+	\\
+	Only 4 cases remain: 
+	\\
+	a) Let there be an attached King $k_1$ S to $q_r$.
+	\\
+	b) Let there be an open King $k_2$ S to $q_r$.
+	\\
+	c) Let there be an open King $k_3$ SW to $q_r$.
+	\\
+	d) Let there be an attached King $k_4$ SW to $q_r$.
+	\\
+	Case a):\\
+	Not expanding to SE only S and SW remain. 
+	Then there is a forced expansion to SW either attached or open which would lead back to our 4 cases for a new Queen, just further to the South. Therefore, we can safely ignore this case for now.
+	\\
+	Case b):\\
+	If a Queen is open to the South, then the corresponding King must be open to the North. This King again needs 2 Queens. In case of any Eastern neighbor, another King expansion to S, SE or E would be forced.
+	The only shape that still holds (Fig.6) would be shape 6 with Queens to NW and S. Now another King is forced to the South and with one more Queen to SW, this brings us back to our 4 cases with again a queen S to $k_2$ but only more to the south. Just like in a) we can also ignore this case because it repeats the pattern only further to the South.
+	\\
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{4caseqr}
+		\caption{4 cases for $q_r$}
+		\label{fig:4caseqr}
+	\end{figure}
+	\\
+	Case c):\\
+	Similarly, in order not to expand E, SE or S we need to avoid placing Queens in said direction. Being open to NE, leaves us with the only shape exactly like $k_r$ which also leads us back to our 4 cases. Because this King $k_3$ has to be at least in the diagonal SW to $q_r$ we can ignore this case. But actually this case is impossible because if this is the only shape for $k_3$ and with it being open to $q_r$, we can see that both queens North to $k_r$ and $k_b$ would threaten each other. With no possible King being placed in between because for that King it would be impossible to place two Queens in only N, NW and W.
+	\\
+	Case d):\\
+	Threatening any King in S direction would lead us back to case a) or b). Threatening any King in SW direction would lead us back to c) or d). Unlike in c) because having a Queen NE provides one more option (shape 1) in Fig.~\ref{fig:standalonekingqueenremain} . And again this was a King expansion to SW. Here we should also rule out the option that we could place the queen West to $k_4$ because that would be threatened by the Queen North to $k_r$. Even if d) is appended to previous a) or b) there will still always be that Queen.
+	\\
+	\\
+	And after examining all 4 cases, while trying to avoid any expansion to S, SE or E, we found out that it is impossible to avoid expansion to either S or SW for any King forcibly expanded through $k_r$. We could also rule out any expansion to NE, E, SE or S like discussed in section 5.\\
+	\\
+	It follows that in a finite solution with $k_r$ expanding it has to eventually meet the lowest King piece. Which means there either is no solution or it has to be in the same row as $k_b$.
+	
+	\section{King expansion of $k_b$}
+	Analogous to $k_r$ we can say that $k_b$ must also expand at least diagonally to NE or further south.
+	
+	\section{forced if $k_r$ then $k_b$ at least at diagonal}
+	In the previous sections we did see that from $k_r$ a King expansion is forced at least directly to the South but at least diagonally to $k_r$. This means $k_b$ has to be at least in that diagonal its row or further to the East. 
+	
+	\section{if $k_b$ past diagonal $k_b$ not possible}
+	On the other hand, due to the symmetrical property $k_b$ also has to expand at least diagonally or further North and finally meet $k_r$.
+	
+	\section{diagonal not possible}
+	Unfortunately, this deems impossible. Because if $k_b$ is further East to the diagonal SW of $k_r$, then $k_b$ forces $k_r$ to be at least in the diagonal NE to $k_b$. In the column we assumed $k_r$ before, now shows us $k_r$ being further to the South than before. So we can conclude that $k_r$ has to be diagonally placed to $k_b$ and otherwise. The only solution where this would be possible, is when $k_r$ is using the pattern c) or d) in Fig.\ref{fig:4caseqr}, where c is already impossible.\\
+	Because with a Queen on top N to $k_r$ and a Queen W to $k_b$ and the alternating sequence of Kings on our diagonal, no further pieces can be placed between these two Queens. But this can also not be a solution because Queens are not allow to threaten each other just like in case d).\\
+	\\
+	Therefore, no solution to (K=2,Q=5) can exist. \qquad\qquad\qquad\qquad\qquad\qquad$\square$
+	
+
+
+\end{document}
