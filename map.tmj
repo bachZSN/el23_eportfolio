@@ -451,7 +451,7 @@
         {
          "columns":8,
          "firstgid":36510,
-         "image":"..\/..\/Downloads\/undefined - Imgur(1).png",
+         "image":"tilesets\/garden_sprites.png",
          "imageheight":17344,
          "imagewidth":256,
          "margin":0,
@@ -464,7 +464,7 @@
         {
          "columns":16,
          "firstgid":40846,
-         "image":"..\/..\/Downloads\/32x32 tiles\/bigger_pokemon_32x32_01.png",
+         "image":"tilesets\/bigger_pokemon_32x32_01.png",
          "imageheight":41664,
          "imagewidth":512,
          "margin":0,
@@ -477,7 +477,7 @@
         {
          "columns":18,
          "firstgid":61678,
-         "image":"..\/..\/Downloads\/32x32 tiles\/TopDownHouse_FloorsAndWalls.png",
+         "image":"tilesets\/TopDownHouse_FloorsAndWalls.png",
          "imageheight":288,
          "imagewidth":576,
          "margin":0,
@@ -490,7 +490,7 @@
         {
          "columns":8,
          "firstgid":61840,
-         "image":"..\/..\/Downloads\/32x32 tiles\/pokemon_32x32_01.png",
+         "image":"tilesets\/pokemon_32x32_01.png",
          "imageheight":20832,
          "imagewidth":256,
          "margin":0,
