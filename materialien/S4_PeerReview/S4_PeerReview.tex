@@ -7,39 +7,54 @@
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{graphicx}
-%\graphicspath{ {./images/} }
+\usepackage{hyperref}
+\usepackage{fancyhdr}
 \addto\captionsngerman{\renewcommand{\figurename}{Fig.}}
 
 
 \begin{document}
-	\begin{flushleft}
-		Bach Nguyen, Johannes Roloff - HTWK Leipzig - INB
-	\end{flushleft}
+	% Set the page style to "fancy"...
+	\pagestyle{fancy}
+	%... then configure it.
+	\fancyhead{} % clear all header fields
+	\fancyhead[L]{Bach Nguyen, Johannes Roloff - HTWK Leipzig - INB}
+	\fancyfoot{} % clear all footer fields
 	\begin{center}
 		\begin{LARGE}
 			\textbf{Station 4 Peer-Review}
 		\end{LARGE}
 	\end{center}
+	
 	\section*{Einordnung der Aufgabe im Prozess}
 	\begin{figure} [h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{e-portfolio-prozesse-schaffert}
-		\caption{Prozesse der Portfolio-Arbeit (Schaffert et al. 2007, S. 79)}
+		\caption{Prozesse der Portfolio-Arbeit (Schaffert et al. 2007, S. 79)\cite{schaffert_e-portfolio-einsatz_2007}}
 		\label{fig:e-portfolio-prozesse-schaffert}
 	\end{figure}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\linewidth]{cycle-of-documented-lifelong-learning-Jensen}
-		\caption{cycle of documented lifelong learning (Jensen,Treuer 2014)}
+		\caption{cycle of documented lifelong learning (Jensen,Treuer 2014)\cite{jenson_defining_2014}}
 		\label{fig:cycle-of-documented-lifelong-learning-jensen}
 	\end{figure}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.8\linewidth]{model-of-e-portfolio-based-learning}
-		\caption{A model of e-portfolio-based learning (JISC 2008, S. 9)}
+		\caption{A model of e-portfolio-based learning (JISC 2008, S. 9) \cite{jisc_effective_2008}}
 		\label{fig:model-of-e-portfolio-based-learning}
 	\end{figure}
+	
 	\pagebreak 
+	
+	\section*{Informationsmaterialien}
+	
+	Wiederhole dein Wissen über Latex oder nutze sonst im Notfall andere Editoren wie Word um PDF Dateien aus deinen Aufgaben und Artefakte, aber auch Scans, zu erstellen.
+	
+	\bibliographystyle{alpha}
+	\bibliography{../eportfolio_lib}
+	
+	\pagebreak
 	
 	\section*{Einleitung}
 	Sind meine Einschätzungen über mich selbst so gut? Was kann ich von anderen Lernen? Wie könnte ich meine Portfolioarbeit verbessern und effizienter gestalten? Wie fühle ich mich dabei anderen meine Artefakte zu präsentieren? Kann ich das auch nutzen um eine Bewerbung zu gestalten? Finde Dich hier zu erst in einer Gruppe von 4 bis 5 Personen zusammen.
