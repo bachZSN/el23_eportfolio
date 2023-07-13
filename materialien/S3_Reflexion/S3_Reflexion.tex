@@ -6,40 +6,55 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathtools}
-\usepackage{graphicx}
-%\graphicspath{ {./images/} }
+\usepackage{graphicx}\usepackage{hyperref}
+\usepackage{fancyhdr}
 \addto\captionsngerman{\renewcommand{\figurename}{Fig.}}
 
 
 \begin{document}
-	\begin{flushleft}
-		Bach Nguyen, Johannes Roloff - HTWK Leipzig - INB
-	\end{flushleft}
+	% Set the page style to "fancy"...
+	\pagestyle{fancy}
+	%... then configure it.
+	\fancyhead{} % clear all header fields
+	\fancyhead[L]{Bach Nguyen, Johannes Roloff - HTWK Leipzig - INB}
+	\fancyfoot{} % clear all footer fields
 	\begin{center}
 		\begin{LARGE}
 			\textbf{Station 3 Reflexion}
 		\end{LARGE}
 	\end{center}
+	
 	\section*{Einordnung der Aufgabe im Prozess}
 	\begin{figure} [h]
 		\centering
 		\includegraphics[width=0.7\linewidth]{e-portfolio-prozesse-schaffert}
-		\caption{Prozesse der Portfolio-Arbeit (Schaffert et al. 2007, S. 79)}
+		\caption{Prozesse der Portfolio-Arbeit (Schaffert et al. 2007, S. 79)\cite{schaffert_e-portfolio-einsatz_2007}}
 		\label{fig:e-portfolio-prozesse-schaffert}
 	\end{figure}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.5\linewidth]{cycle-of-documented-lifelong-learning-Jensen}
-		\caption{cycle of documented lifelong learning (Jensen,Treuer 2014)}
+		\caption{cycle of documented lifelong learning (Jensen,Treuer 2014)\cite{jenson_defining_2014}}
 		\label{fig:cycle-of-documented-lifelong-learning-jensen}
 	\end{figure}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.8\linewidth]{model-of-e-portfolio-based-learning}
-		\caption{A model of e-portfolio-based learning (JISC 2008, S. 9)}
+		\caption{A model of e-portfolio-based learning (JISC 2008, S. 9) \cite{jisc_effective_2008}}
 		\label{fig:model-of-e-portfolio-based-learning}
 	\end{figure}
+	
 	\pagebreak 
+	
+	\section*{Informationsmaterialien}
+	
+	Belese dich zu den Qualitäten der \href{https://doi.org/10.1007/s40692-020-00157-6}{Reflexion}\cite{sultana_e-portfolios_2020} und versuche nachzuvollziehen, wie die Reflexion dich in deinem eigenen Lernen unterstützen kann.
+	
+	
+	\bibliographystyle{alpha}
+	\bibliography{../eportfolio_lib}
+	
+	\pagebreak
 	
 	\section*{Einleitung}
 	Was bedeutet Reflexion und was bedeutet Selbstreflexion? Lohnt es sich einen Blick nochmal auf dein Lernverhalten zu werfen? Gibt es unterschiedliche Stufen von Selbstreflexion?
@@ -47,7 +62,7 @@
 	\section*{Aufgabenstellung}
 
 	\begin{enumerate}
-		\item Versetze Dich nun in die Lage, jetzt mitten im Semester zu sein. Nehme dir zu erst deine Lernziele, die du in Station 1 erarbeitet hast und analysiere, ob du auf einem guten Weg bist, diese zu erreichen. Folgende Fragen sollen dich hierbei unterstützen. Schreibe dazu einen Selbstreflexionsbericht 
+		\item Versetze dich nun in die Lage, jetzt mitten im Semester zu sein. Nehme dir zu erst deine Lernziele, die du in Station 1 erarbeitet hast und analysiere, ob du auf einem guten Weg bist, diese zu erreichen. Folgende Fragen sollen dich hierbei unterstützen. Schreibe dazu einen Selbstreflexionsbericht 
 		\begin{enumerate}
 			\item Bin ich zufrieden mit meiner bisherigen Lernleistung?
 			\item Sind meine Ziele immer noch SMART, muss ich sie anpassen?

@@ -1,12 +1,5 @@
 \begin{thebibliography}{SHPHWB07}
 
-\bibitem[AP10]{alexiou_enhancing_2010}
-Aikaterini Alexiou and Fotini Paraskeva.
-\newblock Enhancing self-regulated learning skills through the implementation
-  of an e-portfolio tool.
-\newblock {\em Procedia - Social and Behavioral Sciences}, 2(2):3048--3054,
-  January 2010.
-
 \bibitem[JIS08]{jisc_effective_2008}
 JISC.
 \newblock Effective {Practice} with e-{Portfolios}. {Supporting} 21st century
@@ -27,5 +20,11 @@ Sandra Schaffert, Veronika Hornung-Prähauser, Wolf Hilzensauer, and Diana
   herausforderungen.
 \newblock {\em Ne (x) t Generation Learning “: E-Assessment und E-Portfolio:
   halten sie, was sie versprechen}, pages 75--90, 2007.
+
+\bibitem[SLL20]{sultana_e-portfolios_2020}
+Foujia Sultana, Cher~Ping Lim, and Min Liang.
+\newblock E-portfolios and the development of students’ reflective thinking
+  at a {Hong} {Kong} {University}.
+\newblock {\em J. Comput. Educ.}, 7(3):277--294, September 2020.
 
 \end{thebibliography}

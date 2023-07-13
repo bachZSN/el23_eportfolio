@@ -1,29 +1,29 @@
 This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: S2_Aufgabe.aux
+The top-level auxiliary file: S5_Evaluation.aux
 The style file: alpha.bst
 Database file #1: ../eportfolio_lib.bib
 Warning--empty journal in jisc_effective_2008
 You've used 4 entries,
             2543 wiz_defined-function locations,
-            583 strings with 5295 characters,
-and the built_in function-call counts, 1712 in all, are:
-= -- 174
+            583 strings with 5255 characters,
+and the built_in function-call counts, 1662 in all, are:
+= -- 169
 > -- 77
 < -- 3
 + -- 26
 - -- 26
-* -- 127
-:= -- 284
+* -- 119
+:= -- 279
 add.period$ -- 12
 call.type$ -- 4
 change.case$ -- 25
 chr.to.int$ -- 4
 cite$ -- 5
 duplicate$ -- 67
-empty$ -- 117
+empty$ -- 111
 format.name$ -- 31
-if$ -- 347
+if$ -- 336
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 4
@@ -35,7 +35,7 @@ purify$ -- 29
 quote$ -- 0
 skip$ -- 61
 stack$ -- 0
-substring$ -- 104
+substring$ -- 89
 swap$ -- 13
 text.length$ -- 3
 text.prefix$ -- 1
