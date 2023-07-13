@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: S2_Aufgabe.aux
+The style file: alpha.bst
+Database file #1: ../eportfolio_lib.bib
+Warning--empty journal in jisc_effective_2008
+You've used 4 entries,
+            2543 wiz_defined-function locations,
+            581 strings with 5143 characters,
+and the built_in function-call counts, 1536 in all, are:
+= -- 151
+> -- 66
+< -- 4
++ -- 22
+- -- 22
+* -- 103
+:= -- 253
+add.period$ -- 11
+call.type$ -- 4
+change.case$ -- 24
+chr.to.int$ -- 4
+cite$ -- 5
+duplicate$ -- 64
+empty$ -- 110
+format.name$ -- 28
+if$ -- 314
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 3
+newline$ -- 22
+num.names$ -- 12
+pop$ -- 28
+preamble$ -- 1
+purify$ -- 28
+quote$ -- 0
+skip$ -- 60
+stack$ -- 0
+substring$ -- 73
+swap$ -- 13
+text.length$ -- 4
+text.prefix$ -- 2
+top$ -- 0
+type$ -- 32
+warning$ -- 1
+while$ -- 16
+width$ -- 5
+write$ -- 50
+(There was 1 warning)
