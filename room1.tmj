@@ -139,6 +139,12 @@
                  "id":69,
                  "name":"collides",
                  "opacity":1,
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":true
+                        }],
                  "type":"tilelayer",
                  "visible":true,
                  "width":40,
@@ -225,13 +231,13 @@
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                  "height":30,
                  "id":72,
-                 "name":"urlGooglePortfolio",
+                 "name":"urlOpalPortfolio",
                  "opacity":1,
                  "properties":[
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/sites.google.com\/"
+                         "value":"https:\/\/bildungsportal.sachsen.de\/opal\/auth\/MapInvitation\/1688783325130451012?page=40623800323"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
