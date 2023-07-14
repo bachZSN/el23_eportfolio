@@ -1002,7 +1002,7 @@
          "margin":0,
          "name":"pokemon_indoor_32x32_PartThree",
          "spacing":0,
-         "tilecount":3840,
+         "tilecount":960,
          "tileheight":32,
          "tilewidth":32
         }],

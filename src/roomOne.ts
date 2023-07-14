@@ -6,7 +6,7 @@ let currentPopup: any = undefined;
 
 WA.onInit().then(() => {
     console.log('Scripting API ready');
-    console.log('Player tags: ', WA.player.tags)
+    console.log('Player tags: ', WA.player.tags);
     
     WA.room.area.onEnter('clock').subscribe(()  => {
         var anleitung = new String("Anleitung fuer das Bedienen der Station 1");
@@ -21,7 +21,7 @@ WA.onInit().then(() => {
             console.log('Scripting API Extra ready');
         }).catch(e => console.error(e));
     }
-}).catch(e => console.error(e));
+).catch(e => console.error(e));
 
 function closePopup(){
     if (currentPopup !== undefined) {
