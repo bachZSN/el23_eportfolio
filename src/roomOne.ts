@@ -6,7 +6,7 @@ let currentPopup: any = undefined;
 
 WA.onInit().then(() => {
     console.log('Scripting API ready');
-    console.log('Player tags: ', WA.player.tags)
+    console.log('Player tags: ', WA.player.tags);
     
     WA.room.area.onEnter('clock').subscribe(()  => {
         var anleitung = new String("Anleitung fuer das Bedienen der Station 1");
