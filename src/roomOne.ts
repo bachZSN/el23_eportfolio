@@ -21,7 +21,7 @@ WA.onInit().then(() => {
             console.log('Scripting API Extra ready');
         }).catch(e => console.error(e));
     }
-}).catch(e => console.error(e));
+).catch(e => console.error(e));
 
 function closePopup(){
     if (currentPopup !== undefined) {
