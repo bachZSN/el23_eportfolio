@@ -31,10 +31,27 @@ WA.onInit().then(() => {
         japBellSound.play(japBellConfig);
     });
     
-    WA.room.onLeaveLayer("soungBellGlobal").subscribe(() => {
+    WA.room.onLeaveLayer("soundBellGlobal").subscribe(() => {
        soundBellGlobalSubscriber.unsubscribe(); 
     });
 
+    const popUpControlSubscriber = WA.room.onEnterLayer("soundLever").subscribe(() => {
+        WA.ui.openPopup("bellControlPopUp", "Möchtest du die Glocke läutern", [
+            {
+                label: "Läuten",
+                className: "success",
+                callback: () => {
+                    japBellSound.play(japBellConfig);
+                }
+            }
+        ]);
+    });
+
+    WA.room.onLeaveLayer("soundLever").subscribe(() => {
+        popUpControlSubscriber.unsubscribe();
+    });
+
+    //WA.state.onVariableChange('bgmIsOn')
 }).catch(e => console.error(e));
 
 export {};
