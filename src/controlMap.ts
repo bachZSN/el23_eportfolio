@@ -7,7 +7,7 @@ import {openConfig} from '@workadventure/scripting-api-extra';
 
 console.log('Script started successfully');
 
-var japBellSound = WA.sound.loadSound("audio/japanese_school_bell.mp3");
+var japBellSound = WA.sound.loadSound("../audio/japanese_school_bell.mp3");
 var japBellConfig = {
     volume : 0.5,
     loop : false,
