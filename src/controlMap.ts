@@ -12,7 +12,7 @@ var japBellConfig = {
     volume : 0.5,
     loop : false,
     rate : 3,
-    detune : 1,
+    detune : 0,
     delay : 0,
     seek : 0,
     mute : false
@@ -51,9 +51,8 @@ WA.onInit().then(() => {
     //   soundBellGlobalSubscriber.unsubscribe(); 
     //});
 
-    let soundBellPopUp;
     WA.room.onEnterLayer("soundLever").subscribe(() => {
-        soundBellPopUp = WA.ui.openPopup("bellControlPopUp", "Möchtest du die Glocke läutern", [
+        WA.ui.openPopup("bellControlPopUp", "Möchtest du die Glocke läutern", [
             {
                 label: "Läuten",
                 className: "success",
@@ -73,11 +72,13 @@ WA.onInit().then(() => {
         ]);
     });
 
-    WA.room.onLeaveLayer("soundLever").subscribe(() => {
-        //soundBellPopUp.close();
-    });
+    areaSub();
 
-    //WA.state.onVariableChange('bgmIsOn')
+    WA.state.onVariableChange('bgmIsOn').subscribe((value) => {
+        if (value) {
+            japBellSound.play(japBellConfig);
+        }
+    });
 }).catch(e => console.error(e));
 
 export {};
@@ -89,5 +90,17 @@ function logBoundariesSoundLayer() {
     console.log('Left:' , boundaries.left);
     console.log('Bottom:' , boundaries.bottom);
     console.log('Right:' , boundaries.right);
+}
+
+function areaSub() {
+    const areaSubscriber = WA.room.area.onEnter("paintControlArea").subscribe(() => {
+        WA.chat.sendChatMessage("Hello!", "Mr Robot");
+        openConfig();
+    });
+    WA.room.area.onLeave("paintControlArea").subscribe(() => {
+        WA.chat.sendChatMessage("Goodbye!", "Mr Robot");
+        areaSubscriber.unsubscribe();
+    });
+    paintControlArea.setProperty("openWebsite", "https://www.wikipedia.org/");
 }
 
