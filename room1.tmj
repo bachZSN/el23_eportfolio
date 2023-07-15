@@ -6,6 +6,39 @@
          "id":75,
          "layers":[
                 {
+                 "draworder":"topdown",
+                 "id":89,
+                 "name":"zoomSilentZone",
+                 "objects":[
+                        {
+                         "height":129.333333333333,
+                         "id":36,
+                         "name":"zoomie",
+                         "properties":[
+                                {
+                                 "name":"focusable",
+                                 "type":"bool",
+                                 "value":true
+                                }, 
+                                {
+                                 "name":"zoomMargin",
+                                 "type":"float",
+                                 "value":0.7
+                                }],
+                         "rotation":0,
+                         "type":"area",
+                         "visible":true,
+                         "width":193.333333333333,
+                         "x":30.6666666666667,
+                         "y":478.666666666667
+                        }],
+                 "opacity":1,
+                 "type":"objectgroup",
+                 "visible":true,
+                 "x":0,
+                 "y":0
+                }, 
+                {
                  "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -730,8 +763,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":89,
- "nextobjectid":36,
+ "nextlayerid":90,
+ "nextobjectid":37,
  "orientation":"orthogonal",
  "properties":[
         {
