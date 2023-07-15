@@ -1,8 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
-import {getLayersMap, findLayerBoundaries} from '@workadventure/scripting-api-extra';
-import {ITiledMapTileLayer} from "@workadventure/tiled-map-type-guard/dist/ITiledMapTileLayer";
 import {openConfig} from '@workadventure/scripting-api-extra';
 
 console.log('Script started successfully');
@@ -63,7 +61,6 @@ WA.onInit().then(() => {
                 className: "primary",
                 callback: (popup) => {
                     popup.close();
-                    logBoundariesSoundLayer();
                 }
             }
         ]);
@@ -80,18 +77,6 @@ WA.onInit().then(() => {
 
 export {};
 
-const layersAll = getLayersMap();
-const soundStuffLayer = layersAll.get("sound") as ITiledMapTileLayer;
-
-
-function logBoundariesSoundLayer() {
-    const boundaries = findLayerBoundaries(soundStuffLayer);
-    console.log(soundStuffLayer);
-    console.log('Top:' , boundaries.top);
-    console.log('Left:' , boundaries.left);
-    console.log('Bottom:' , boundaries.bottom);
-    console.log('Right:' , boundaries.right);
-}
 
 function areaSub() {
     const areaSubscriber = WA.room.area.onEnter("paintControlArea").subscribe(() => {
