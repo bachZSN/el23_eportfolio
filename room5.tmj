@@ -431,7 +431,7 @@
                         {
                          "name":"exitUrl",
                          "type":"string",
-                         "value":"mainHall.tmj#entry"
+                         "value":"mainHall.tmj#entryFromGarden"
                         }],
                  "type":"tilelayer",
                  "visible":true,
