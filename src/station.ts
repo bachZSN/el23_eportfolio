@@ -14,6 +14,16 @@ var japBellConfig = {
     seek : 0,
     mute : false
 }
+var bgmSound = WA.sound.loadSound("../audio/_insername");
+var bgmConfig = {
+    volume : 0.5,
+    loop : true,
+    rate : 1,
+    detune : 0,
+    delay : 0,
+    seek : 0,
+    mute : false
+}
 
 WA.onInit().then(() => {
     initBootstrap();
@@ -33,6 +43,16 @@ function flipBellVariable() {
     WA.state.bellIsOn = !WA.state.bellIsOn;
 }
 
+/// play bgm
+function playBgm() {
+    bgmSound.play(bgmConfig);
+}
+
+/// stop bgm
+function stopBgm() {
+    bgmSound.stop();
+}
+
 /// init bootstrap
 function initBootstrap() {
     console.log("Scripting Room API ready");
@@ -46,7 +66,26 @@ function initBootstrap() {
 
 /// setup the popup and function of the bgm
 function setUpBgmLayer() {
-
+    WA.room.onEnterLayer("Util/bgmLayer").subscribe(() => {
+        WA.ui.openPopup("bgmPopUp", "Hintergrundmusik abspielen", [
+            {
+                label: "Spielen",
+                className: "success",
+                callback: (popup) => {
+                    playBgm();
+                    popup.close();
+                }
+            },
+            {
+                label: "Stoppen",
+                className: "primary",
+                callback: (popup) => {
+                    stopBgm();
+                    popup.close();
+                }
+            }
+        ])
+    });
 }
 
 /// setup the popup and function of the bell
