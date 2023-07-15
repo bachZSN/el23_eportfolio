@@ -878,14 +878,14 @@
                  "y":31.7401277044201
                 }, 
                 {
-                 "height":61.8932,
+                 "height":88.872308548757,
                  "id":40,
                  "name":"klingelPopUp",
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":119.025,
-                 "x":932.366490763127,
+                 "width":184.092261794061,
+                 "x":933.953497148348,
                  "y":34.1206617940611
                 }],
          "opacity":1,
@@ -904,12 +904,18 @@
                  "id":41,
                  "name":"bellIsOn",
                  "point":true,
+                 "properties":[
+                        {
+                         "name":"default",
+                         "type":"bool",
+                         "value":false
+                        }],
                  "rotation":0,
                  "type":"variable",
                  "visible":true,
                  "width":0,
-                 "x":1079.16434195028,
-                 "y":65.0672617940611
+                 "x":1082.33835472072,
+                 "y":84.1113384167131
                 }],
          "opacity":1,
          "type":"objectgroup",
