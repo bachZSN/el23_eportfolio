@@ -433,11 +433,6 @@
          "name":"mapName",
          "type":"string",
          "value":"Control"
-        }, 
-        {
-         "name":"script",
-         "type":"string",
-         "value":"src\/controlMap.ts"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.10.1",

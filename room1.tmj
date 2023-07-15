@@ -945,7 +945,7 @@
         {
          "name":"mapName",
          "type":"string",
-         "value":"Office"
+         "value":"Station1"
         }, 
         {
          "name":"script",
