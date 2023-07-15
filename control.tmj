@@ -252,7 +252,7 @@
                 {
                  "name":"exitUrl",
                  "type":"string",
-                 "value":"map.tmj"
+                 "value":"garden.tmj"
                 }],
          "type":"tilelayer",
          "visible":true,
