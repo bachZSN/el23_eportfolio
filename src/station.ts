@@ -14,7 +14,7 @@ var japBellConfig = {
     seek : 0,
     mute : false
 }
-var bgmSound = WA.sound.loadSound("../audio/_insername");
+var bgmSound = WA.sound.loadSound("../audio/bgm.mp3");
 var bgmConfig = {
     volume : 0.5,
     loop : true,
