@@ -408,7 +408,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/bildungsportal.sachsen.de\/opal\/auth\/MapInvitation\/1688783325130451012?page=40623800323"
+                         "value":"https:\/\/bildungsportal.sachsen.de\/opal\/auth\/resource\/portfolio"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
