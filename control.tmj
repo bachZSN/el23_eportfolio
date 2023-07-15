@@ -368,7 +368,18 @@
          "draworder":"topdown",
          "id":3,
          "name":"floorLayer",
-         "objects":[],
+         "objects":[
+                {
+                 "height":142.667,
+                 "id":7,
+                 "name":"bellControlPopUp",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":276,
+                 "x":658,
+                 "y":39.3331666666667
+                }],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
@@ -408,31 +419,9 @@
          "visible":true,
          "x":0,
          "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":18,
-         "name":"popUp",
-         "objects":[
-                {
-                 "height":142.666666666667,
-                 "id":4,
-                 "name":"",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":276,
-                 "x":664,
-                 "y":14.6666666666667
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
         }],
  "nextlayerid":19,
- "nextobjectid":7,
+ "nextobjectid":8,
  "orientation":"orthogonal",
  "properties":[
         {

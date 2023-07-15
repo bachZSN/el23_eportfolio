@@ -1,5 +1,6 @@
 /// <reference types="@workadventure/iframe-api-typings" />
 
+import { Popup } from "@workadventure/iframe-api-typings";
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
 console.log('Script started successfully');
@@ -26,29 +27,38 @@ WA.onInit().then(() => {
         console.log('Scripting API Extra ready');
     }).catch(e => console.error(e));
 
-    const soundBellGlobalSubscriber = WA.room.onEnterLayer("soundBellGlobal").subscribe(() => {
+    WA.room.onEnterLayer("soundBellGlobal").subscribe(() => {
         WA.state.bgmIsOn = true;
         japBellSound.play(japBellConfig);
     });
     
-    WA.room.onLeaveLayer("soundBellGlobal").subscribe(() => {
-       soundBellGlobalSubscriber.unsubscribe(); 
-    });
+    //WA.room.onLeaveLayer("soundBellGlobal").subscribe(() => {
+    //   soundBellGlobalSubscriber.unsubscribe(); 
+    //});
 
-    const popUpControlSubscriber = WA.room.onEnterLayer("soundLever").subscribe(() => {
-        WA.ui.openPopup("bellControlPopUp", "Möchtest du die Glocke läutern", [
+    let soundBellPopUp;
+
+    WA.room.onEnterLayer("soundLever").subscribe(() => {
+        soundBellPopUp = WA.ui.openPopup("bellControlPopUp", "Möchtest du die Glocke läutern", [
             {
                 label: "Läuten",
                 className: "success",
                 callback: () => {
                     japBellSound.play(japBellConfig);
                 }
+            },
+            {
+                label: "Schließen",
+                className: "primary",
+                callback: (popup) => {
+                    popup.close();
+                }
             }
         ]);
     });
 
     WA.room.onLeaveLayer("soundLever").subscribe(() => {
-        popUpControlSubscriber.unsubscribe();
+        soundBellPopUp.close();
     });
 
     //WA.state.onVariableChange('bgmIsOn')
