@@ -18,9 +18,6 @@ var japBellConfig = {
     mute : false
 }
 
-const layersAll = await getLayersMap();
-const soundStuffLayer = layersAll.get("sound") as ITiledMapTileLayer;
-
 //const paintArea =  ;
 
 const paintControlArea = WA.room.area.create({
@@ -82,6 +79,10 @@ WA.onInit().then(() => {
 }).catch(e => console.error(e));
 
 export {};
+
+const layersAll = getLayersMap();
+const soundStuffLayer = layersAll.get("sound") as ITiledMapTileLayer;
+
 
 function logBoundariesSoundLayer() {
     const boundaries = findLayerBoundaries(soundStuffLayer);
