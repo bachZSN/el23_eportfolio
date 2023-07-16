@@ -457,7 +457,7 @@
                         {
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
-                         "value":"Press Space to begin evaluation test"
+                         "value":"Leertaste um den Einf\u00fchrungstest zu beginnen"
                         }],
                  "type":"tilelayer",
                  "visible":true,

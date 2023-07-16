@@ -150,30 +150,14 @@ function setUpTestSwitchLayer() {
     });
 }
 
-/// turning on the correct Testtype 
-function switchTest(testType:string) {
-    switch(testType) {
-        case "anfangsTest": {
-            switchToAnfangstest();
-            break;
-        }
-        case "abschlussTest": {
-            switchToEndTest();
-            break;
-        }
-        default: {
-            console.log("testtype not available");
-            break;
-        }
-    }
-}
-
 /// switching on beginning test
 function switchToAnfangstest() {
-
+    WA.room.setProperty("Util/urlOnyxTest", "openWebsite", "https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/40617082880?6");
+    WA.room.setProperty("Util/urlOnyxTest", "openWebsiteTriggerMessage", "Leertaste um den Einführungstest zu beginnen");
 }
 
 /// switching on end test
 function switchToEndTest() {
-
+    WA.room.setProperty("Util/urlOnyxTest", "openWebsite", "https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/40713125888?4");
+    WA.room.setProperty("Util/urlOnyxTest", "openWebsiteTriggerMessage", "Leertaste um den Abschlusstest zu beginnen");
 }
