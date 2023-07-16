@@ -29,7 +29,7 @@ WA.onInit().then(() => {
     initBootstrap();
     setUpBgmLayer();
     setUpBellLeverLayer();
-
+    setUpTestSwitchLayer();
 }).catch(e => console.error(e));
 
 
@@ -84,7 +84,7 @@ function setUpBgmLayer() {
                     popup.close();
                 }
             }
-        ]);
+        ])
     });
 }
 
@@ -108,7 +108,7 @@ function setUpBellLeverLayer() {
                     popup.close();
                 }
             }
-        ])
+        ]);
     });
 
     WA.state.onVariableChange("bellIsOn").subscribe((value) => {
@@ -116,4 +116,64 @@ function setUpBellLeverLayer() {
             playBellSound();
         }
     });
+}
+
+/// loading switch PopUps and functions for layer
+function setUpTestSwitchLayer() {
+    WA.room.onEnterLayer("Util/switchTestLayer").subscribe(() => {
+        WA.ui.openPopup("switchTestPopUp", "Test ändern auf", [
+            {
+                label: "Einführung",
+                className: "success",
+                callback: (popup) => {
+                    switchToAnfangstest();
+                    popup.close();
+                }
+            },
+            {
+                label: "Abschluss",
+                className: "success",
+                callback: (popup) => {
+                    switchToEndTest();
+                    popup.close();
+                }
+            },
+            {
+                label: "Schließen",
+                className: "primary",
+                callback: (popup) => {
+                    popup.close();
+                }
+            }
+
+        ]);
+    });
+}
+
+/// turning on the correct Testtype 
+function switchTest(testType:string) {
+    switch(testType) {
+        case "anfangsTest": {
+            switchToAnfangstest();
+            break;
+        }
+        case "abschlussTest": {
+            switchToEndTest();
+            break;
+        }
+        default: {
+            console.log("testtype not available");
+            break;
+        }
+    }
+}
+
+/// switching on beginning test
+function switchToAnfangstest() {
+
+}
+
+/// switching on end test
+function switchToEndTest() {
+
 }
