@@ -6,7 +6,7 @@ console.log('Script started successfully');
 
 var japBellSound = WA.sound.loadSound("../audio/japanese_school_bell.mp3");
 var japBellConfig = {
-    volume : 0.5,
+    volume : 1,
     loop : false,
     rate : 3,
     detune : 0,
@@ -16,7 +16,7 @@ var japBellConfig = {
 }
 var bgmSound = WA.sound.loadSound("../audio/bgm.mp3");
 var bgmConfig = {
-    volume : 0.2,
+    volume : 0.05,
     loop : true,
     rate : 1,
     detune : 0,
