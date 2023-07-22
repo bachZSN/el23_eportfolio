@@ -937,7 +937,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"src\/mainHall.ts"
+         "value":"src\/mainHall.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.10.1",
